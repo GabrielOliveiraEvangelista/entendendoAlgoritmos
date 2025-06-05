@@ -1,4 +1,15 @@
-const arrayNumber = Array.from({ length: 2000000 }, (_, i) => i + 1); // array de dois milhões de posições
+/* 
+Pesquisa binária consiste em um algoritmo que sempre vai dividindo ao uma lista ORDENADA ao meio e percorrendo
+para direita ou esquerda dependendo do número que voce deseja encontrar. Para descobrir facilmente quantas etapas
+são necessárias efetuar dada a quantidade de posições do array basta apenas fazer log de N na base 2, um array de
+8 posições são necessária 3 tentativas (log de 8 na base 2 = 3)
+
+Respostas dos exercícios:
+1.1 = 7
+1.2 = 8
+*/
+
+const arrayNumber = Array.from({ length: 8 }, (_, i) => i + 1);
 
 console.time("Busca Binária");
 let tentativaB = -1;
@@ -22,7 +33,8 @@ function buscaBinaria(array, item) {
   return "Número não encontrado";
 }
 console.log(
-  "Índice:" + buscaBinaria(arrayNumber, 2000000),"Tentativas erradas:" + tentativaB
+  "Índice:" + buscaBinaria(arrayNumber, 8),
+  "Tentativas erradas:" + tentativaB
 );
 console.timeEnd("Busca Binária");
 
@@ -39,6 +51,7 @@ function buscaSimples(array, item) {
   return "Número não encontrado";
 }
 console.log(
-  "Índice:" + buscaSimples(arrayNumber, 2000000),"Tentativas erradas:" + tentativaS
+  "Índice:" + buscaSimples(arrayNumber, 8),
+  "Tentativas erradas:" + tentativaS
 );
 console.timeEnd("Busca Simples");
