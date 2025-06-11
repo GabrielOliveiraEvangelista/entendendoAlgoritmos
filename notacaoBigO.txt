@@ -1,0 +1,11 @@
+Não seria interessante calcular a eficiência de um algoritmo apenas pelo fator tempo, pois essa grandeza não será sempre a 
+mesma. Dada uma lista ordenada com 100 elementos, e assumindo que cada verificação custa 1ms, uma busca simples levaria 
+100ms, enquanto uma busca binária levaria apenas 7ms, considerando o pior caso. Nesse exemplo, a binária é 15x mais eficiente 
+do que a simples. No entanto, isso nem sempre será proporcional. Em um outro cenário, com uma lista de 10.000 elementos, a 
+busca binária se torna 715x mais eficiente. Ou seja, enquanto o tempo da busca simples cresce de forma linear, o da binária 
+cresce muito mais devagar — e é aí que entra a notação Big O. Ela abstrai o fator tempo e evidencia o número de operações 
+que cada algoritmo realiza, permitindo identificar qual é mais eficiente. A notação funciona assim:
+O(n)       => n = número de operações  
+Busca simples  => O(n)        => O(100)  
+Busca binária  => O(log n)    => O(log 100) ≈ O(7)
+Ou seja, a busca binária é mais performática que a simples, pois realiza bem menos operações — neste caso, apenas 7.
